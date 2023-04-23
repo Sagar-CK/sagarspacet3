@@ -1,4 +1,4 @@
 # Sagar Space in T3
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+The website is updated! Will be adding new blog entries soon and experimenting more with this stack :)
 
