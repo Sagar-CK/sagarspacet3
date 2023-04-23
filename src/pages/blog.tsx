@@ -96,11 +96,9 @@ const Home: NextPage = () => {
             </Link>
           </div>
         </nav>
-        <div id="canvas-container"  ref={canvasRef} className="w-full h-full fixed">
-        </div>
         
 
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 fixed">
+        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
             A Collection of my <span className="text-[hsl(280,100%,70%)]">Thoughts</span>
           </h1>
@@ -108,56 +106,19 @@ const Home: NextPage = () => {
           {/* Entry 1 */}
           <div id="entry1" className="container flex flex-col items-center justify-center gap-16 px-4 py-16 bg-white/10  text-white rounded-2xl">
             <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-              Entry 1
+              Entry 0
             </h1>
-            {/* Create two columns (left for school right for university that have two rows withine ach of them the top row containing an image and the bottom containing a text description. */}
-            <div className="grid grid-cols-1 gap-64 sm:grid-cols-2 md:gap-64">
-              <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
-                {/* Add the image for school */}
-                <img src="/varian.png" alt="logo" className="w-full h-full rounded-2xl" />
-                <h1  className="text-lg font-bold text-white">
-                Franconian International School
-                </h1>
-                <div className="text-lg">
-                  I am a graduate of the FIS in 2022. I studied the International Baccalaureate Diploma Programme and graduated with a score of 43/45. I was also the recepient of the FIS Award in 2022.
-                </div>
+            {/* Nothing here yet + loading svg */}
+            <div className="flex flex-col items-center justify-center gap-4">
+              <h1 className="text-lg font-bold text-white">
+                Nothing here yet, coming soon 💫
+              </h1>
+              <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+              </svg>
               </div>
-              <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
-                {/* Add the image for school */}
-  
-                <div className="text-lg">
-                  I am studying Computer Science and Engineering and am in my first year. I am part of Delft Aerospace Rocket Engineering (DARE) and am planning to do honours in the future.
-                </div>
-              </div>
-            </div>
-          </div>
 
-
-          {/* Entry 2 */}
-          <div id="entry2" className="container flex flex-col items-center justify-center gap-16 px-4 py-16 bg-white/10  text-white rounded-2xl">
-            <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-              Entry 2
-            </h1>
-            {/* Create two columns (left for school right for university that have two rows withine ach of them the top row containing an image and the bottom containing a text description. */}
-            <div className="grid grid-cols-1 gap-64 sm:grid-cols-2 md:gap-64">
-              <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
-                {/* Add the image for school */}
-                <img src="/varian.png" alt="logo" className="w-full h-full rounded-2xl" />
-                <h1  className="text-lg font-bold text-white">
-                Franconian International School
-                </h1>
-                <div className="text-lg">
-                  I am a graduate of the FIS in 2022. I studied the International Baccalaureate Diploma Programme and graduated with a score of 43/45. I was also the recepient of the FIS Award in 2022.
-                </div>
-              </div>
-              <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
-                {/* Add the image for school */}
-  
-                <div className="text-lg">
-                  I am studying Computer Science and Engineering and am in my first year. I am part of Delft Aerospace Rocket Engineering (DARE) and am planning to do honours in the future.
-                </div>
-              </div>
-            </div>
           </div>
 
 
