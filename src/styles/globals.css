@@ -5,3 +5,14 @@
 .img-color {
     filter: brightness(0) invert(1);
   }
+
+  #canvas-container {
+    position: relative;
+  }
+  
+  .element-on-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }

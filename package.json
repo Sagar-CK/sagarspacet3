@@ -14,12 +14,14 @@
     "@trpc/next": "^10.18.0",
     "@trpc/react-query": "^10.18.0",
     "@trpc/server": "^10.18.0",
+    "gsap": "^3.11.5",
     "next": "^13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "superjson": "1.12.2",
+    "three": "^0.151.3",
     "zod": "^3.21.4"
   },
   "devDependencies": {
@@ -29,6 +31,7 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-slick": "^0.23.10",
+    "@types/three": "^0.150.2",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
     "autoprefixer": "^10.4.14",
@@ -42,5 +45,17 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.12.0"
-  }
+  },
+  "description": "This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sagar-CK/sagarspacet3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sagar-CK/sagarspacet3/issues"
+  },
+  "homepage": "https://github.com/Sagar-CK/sagarspacet3#readme"
 }
