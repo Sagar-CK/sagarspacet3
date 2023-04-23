@@ -66,7 +66,7 @@ const Home: NextPage = () => {
   return (
     <>
    <Head>
-        <title>Sagar's Space</title>
+        <title>Sagar&apos;s Space</title>
         <meta name="description" content="Made by Sagar CK" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

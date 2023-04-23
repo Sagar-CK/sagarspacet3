@@ -63,7 +63,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Sagar's Space</title>
+        <title>Sagar&apos;s Space</title>
         <meta name="description" content="Made by Sagar CK" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -98,7 +98,7 @@ const Home: NextPage = () => {
 
           <div className="container flex flex-col items-center justify-center gap-12 px-4">
             <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-              Welcome to  <span className="text-[#283044]">Sagar's</span> Space!
+              Welcome to  <span className="text-[#283044]">Sagar&apos;s</span> Space!
             </h1>
             <div className="flex flex-row items-center justify-center gap-4">
               <p className="text-lg font-medium text-white">Scroll down to explore!</p>
@@ -150,7 +150,7 @@ const Home: NextPage = () => {
             <div className="flex max-w-xs flex-col gap-10 rounded-xl bg-white/10 p-4 text-white">
               <h3 className="text-3xl font-bold text-[#283044]">Who am I?</h3>
               <div className="text-lg">
-                I am a freshman at TU Delft studying Computer Science and Engineering! Welcome to my "space" - an overview of some of my accomplishments to date.
+                I am a freshman at TU Delft studying Computer Science and Engineering! Welcome to my space - an overview of some of my accomplishments to date.
               </div>
               <div className="flex flex-row gap-4">
                 <button className="bg-[#283044] hover:bg-[#4f188d] text-white rounded-md p-2">
@@ -304,7 +304,7 @@ const Home: NextPage = () => {
                   Research & Software Dev Intern <span className="text-[#283044]">@Varian</span>
                 </h1>
                 <div className="text-lg">
-                  Entering the year 2022, I was granted the opportunity to embark on a new programming endeavor - computer vision. Under the guidance of Stefan Wiesner, I conducted a literature review to understand the world of computer vision concerning point clouds and meshes capturing the human body. I developed an extrema estimation software using an adapted version of Dijkstra's algorithm. This computed the global maxima of a given human point cloud, labeling this vertex's path from the centroid. Thanks once again to Varian and Stefan for taking me on board!
+                  Entering the year 2022, I was granted the opportunity to embark on a new programming endeavor - computer vision. Under the guidance of Stefan Wiesner, I conducted a literature review to understand the world of computer vision concerning point clouds and meshes capturing the human body. I developed an extrema estimation software using an adapted version of Dijkstras algorithm. This computed the global maxima of a given human point cloud, labeling this vertex path from the centroid. Thanks once again to Varian and Stefan for taking me on board!
                 </div>
                 {/* Button to the report */}
                 <button className="bg-white/10 text-white hover:bg-white/20 rounded-md p-2">
@@ -373,7 +373,7 @@ const Home: NextPage = () => {
                   App Dev & UI/UX Intern <span className="text-[#283044]">@DigitalTwin</span>
                 </h1>
                 <div className="text-lg">
-                  After my experience with DigiOnko, I was also tasked with helping Digital Twin, a collaborative project between FAU and Adidas. As an application development intern, I helped design and integrate the existing Digital Twin application into a more modern and 'Adidas' user interface. Through integrating sensor data and developing interfaces for both IOS and Android, Digital Twin expanded my programming horizons! Looking forward to seeing what they can achieve in the coming years.
+                  After my experience with DigiOnko, I was also tasked with helping Digital Twin, a collaborative project between FAU and Adidas. As an application development intern, I helped design and integrate the existing Digital Twin application into a more modern and Adidas-like user interface. Through integrating sensor data and developing interfaces for both IOS and Android, Digital Twin expanded my programming horizons! Looking forward to seeing what they can achieve in the coming years.
                 </div>
               </div>
             </div>
