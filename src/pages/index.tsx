@@ -23,8 +23,8 @@ const Home: NextPage = () => {
       const loader = new PCDLoader();
       loader.load('/cloud1.pcd', (pointCloud) => {
         const geometry = pointCloud.geometry;
-        const color = new THREE.Color(0xffffff);
-        const material = new THREE.PointsMaterial({ size: .5, color: color });
+        const color = new THREE.Color(0x4f2342);
+        const material = new THREE.PointsMaterial({ size: 1, color: color });
         material.blending = THREE.AdditiveBlending; // set blending mode for glow effect
         const points = new THREE.Points(geometry, material);
         scene.add(points);
@@ -39,6 +39,49 @@ const Home: NextPage = () => {
         }
         camera.fov = newFov;
         camera.updateProjectionMatrix();
+
+        const points = scene.children[0];
+        if(points instanceof THREE.Points) {  
+          // Make a new color that is following a gradient towards using Hex values
+          const initColor = points.material.color;
+          const endColor = new THREE.Color(0x4f2342);
+          const color = initColor.clone().lerp(endColor, newFov / 100);
+          const geometry = points.geometry;
+        
+          const material = new THREE.PointsMaterial({ size: 1, color: color });
+          material.blending = THREE.NormalBlending;
+          const pointsNew = new THREE.Points(geometry, material);
+          scene.remove(points)
+        
+
+          // Add random points to the scene or remove them and add new ones that are more spread out 
+          if(points.children.length > 0) {
+            const randomPoints = points.children[0];
+            if (randomPoints instanceof THREE.Points){
+              points.remove(randomPoints);
+            }
+          }
+          const randomGeometry = new THREE.BufferGeometry();
+          const randomMaterial = new THREE.PointsMaterial({ size: 1, color: 0xffffff });
+          randomMaterial.blending = THREE.NormalBlending;
+          const randomPoints = new THREE.Points(randomGeometry, randomMaterial);
+          const randomPositions = new Float32Array(1000);
+          // the positions need to come from the original point cloud and grow inwards
+          // the positons need to be spread out more
+          for (let i = 0; i < 1000; i++) {
+            randomPositions[i] = Math.random() * 1000 - 500;
+          }
+
+
+          randomGeometry.setAttribute("position", new THREE.BufferAttribute(randomPositions, 3));
+          // scene.add(randomPoints);
+          // we need to add these points to the pointsNew object so that they are all in the same object
+          // but we need to only change the position of the random points
+
+          pointsNew.add(randomPoints);
+          scene.add(pointsNew)
+        }
+
         renderer.render(scene, camera);
       };
 
@@ -67,8 +110,9 @@ const Home: NextPage = () => {
         <meta name="description" content="Made by Sagar CK" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-[#7e64f5] to-[#4f188d] overflow-x-hidden">
-
+      <div id="root">	
+      <main className="flex min-h-screen min-w-screen flex-col items-center bg-repeat bg-gradient-to-b from-[#7e64f5] to-[#4f188d] overflow-x-hidden">
+        {/* Change the style of the body to match this background color */}
         <nav className="flex items-center justify-between w-full px-4 py-16 backdrop-filter backdrop-blur">
 
 
@@ -424,6 +468,7 @@ const Home: NextPage = () => {
 
 
       </main>
+      </div>
     </>
   );
 };

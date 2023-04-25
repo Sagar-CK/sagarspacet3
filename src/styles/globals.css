@@ -16,3 +16,8 @@
     left: 0;
     z-index: 1;
   }
+
+  body{
+    overscroll-behavior-y: none;
+    overflow-x: hidden;
+  }
