@@ -4,12 +4,12 @@ import Link from "next/link";
 import { api } from "~/utils/api";
 import * as THREE from "three";
 import { PCDLoader } from "three/examples/jsm/loaders/PCDLoader";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from 'react';
 
 const Home: NextPage = () => {
   const canvasRef = useRef<HTMLDivElement>(null);
   const [pointCloud, setPointCloud] = useState<THREE.Points<THREE.BufferGeometry, THREE.PointsMaterial> | null>(null);
-  const [fov, setFov] = useState(1);
+  const [fov, setFov] = useState<number>(1);
 
   useEffect(() => {
     if (canvasRef.current && canvasRef.current.children.length === 0) {
@@ -41,23 +41,27 @@ const Home: NextPage = () => {
         camera.updateProjectionMatrix();
 
         const points = scene.children[0];
-        if(points instanceof THREE.Points) {  
+        if (points instanceof THREE.Points) {
           // Make a new color that is following a gradient towards using Hex values
-          const initColor = points.material.color;
-          const endColor = new THREE.Color(0x4f2342);
-          const color = initColor.clone().lerp(endColor, newFov / 100);
-          const geometry = points.geometry;
-        
-          const material = new THREE.PointsMaterial({ size: 1, color: color });
-          material.blending = THREE.NormalBlending;
-          const pointsNew = new THREE.Points(geometry, material);
-          scene.remove(points)
-        
+          let pointsNew = new THREE.Object3D();
+          if (points.material instanceof THREE.PointsMaterial) {
+            if (points.material.color instanceof THREE.Color) {
+              const initColor = points.material.color;
+              const endColor = new THREE.Color(0x4f2342);
+              const color = initColor.clone().lerp(endColor, newFov / 100);
+              const geometry = points.geometry;
 
-          // Add random points to the scene or remove them and add new ones that are more spread out 
-          if(points.children.length > 0) {
+              const material = new THREE.PointsMaterial({ size: 1, color: color });
+              material.blending = THREE.NormalBlending;
+              pointsNew = new THREE.Points(geometry, material);
+              scene.remove(points);
+            }
+          }
+
+          // Add random points to the scene or remove them and add new ones that are more spread out
+          if (points.children.length > 0) {
             const randomPoints = points.children[0];
-            if (randomPoints instanceof THREE.Points){
+            if (randomPoints instanceof THREE.Points) {
               points.remove(randomPoints);
             }
           }
@@ -67,7 +71,7 @@ const Home: NextPage = () => {
           const randomPoints = new THREE.Points(randomGeometry, randomMaterial);
           const randomPositions = new Float32Array(1000);
           // the positions need to come from the original point cloud and grow inwards
-          // the positons need to be spread out more
+          // the positions need to be spread out more
           for (let i = 0; i < 1000; i++) {
             randomPositions[i] = Math.random() * 1000 - 500;
           }
