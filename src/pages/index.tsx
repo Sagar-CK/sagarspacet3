@@ -47,14 +47,16 @@ const Home: NextPage = () => {
           if (points.material instanceof THREE.PointsMaterial) {
             if (points.material.color instanceof THREE.Color) {
               const initColor = points.material.color;
-              const endColor = new THREE.Color(0x4f2342);
+              const endColor = new THREE.Color(0xffffff);
               const color = initColor.clone().lerp(endColor, newFov / 100);
-              const geometry = points.geometry;
+              if(points.geometry instanceof THREE.BufferGeometry){
+                const geometry = points.geometry;
 
-              const material = new THREE.PointsMaterial({ size: 1, color: color });
-              material.blending = THREE.NormalBlending;
-              pointsNew = new THREE.Points(geometry, material);
-              scene.remove(points);
+                const material = new THREE.PointsMaterial({ size: 1, color: color });
+                material.blending = THREE.NormalBlending;
+                pointsNew = new THREE.Points(geometry, material);
+                scene.remove(points);
+              }
             }
           }
 
@@ -66,13 +68,16 @@ const Home: NextPage = () => {
             }
           }
           const randomGeometry = new THREE.BufferGeometry();
-          const randomMaterial = new THREE.PointsMaterial({ size: 1, color: 0xffffff });
+          const randomMaterial = new THREE.PointsMaterial({ size: 1, color: 0x4f2342, });
           randomMaterial.blending = THREE.NormalBlending;
+
+          // Get the previous random points and move them inwards
+          
           const randomPoints = new THREE.Points(randomGeometry, randomMaterial);
           const randomPositions = new Float32Array(1000);
           // the positions need to come from the original point cloud and grow inwards
           // the positions need to be spread out more
-          for (let i = 0; i < 1000; i++) {
+          for (let i = 0; i < 5000; i++) {
             randomPositions[i] = Math.random() * 1000 - 500;
           }
 
