@@ -188,7 +188,7 @@ const Home: NextPage = () => {
                     </Link>
                   </button>
                   <button className="bg-white/10 p-2 rounded-md text-white hover:bg-white/20">
-                    <Link href="https://de.linkedin.com/in/sagar-chethan-kumar-02501618aa">
+                    <Link href="https://linkedin.com/in/sagar-chethan-kumar">
                       <img src="/linkedin.svg" alt="logo" className="w-8 text-[#283044]" />
                     </Link>
                   </button>
@@ -460,7 +460,7 @@ const Home: NextPage = () => {
                 </Link>
               </button>
               <button className="bg-white/10 p-2 rounded-md text-white hover:bg-white/20">
-                <Link href="https://de.linkedin.com/in/sagar-chethan-kumar-02501618aa">
+                <Link href="https://linkedin.com/in/sagar-chethan-kumar">
                   <img src="/linkedin.svg" alt="logo" className="w-8 text-[#283044]" />
                 </Link>
               </button>
