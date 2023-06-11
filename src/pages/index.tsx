@@ -125,23 +125,23 @@ const Home: NextPage = () => {
         <nav className="flex items-center justify-between w-full px-4 py-16 backdrop-filter backdrop-blur">
 
 
-          <div className="flex items-center gap-4">
-            <img src="/sck.png" alt="logo" className="w-128 h-8 px-16" />
+          <div className="flex items-center">
+            <img src="/sck.png" alt="logo" className="lg:h-8 h-4 lg:px-16 px-0" />
           </div>
-          <div className="flex items-center gap-16 px-8">
+          <div className="flex items-center lg:gap-16 gap-4 px-8">
             {/* Create a link to bring to the education section which is on the same page*/}
-            <Link href="/#education" className="text-lg font-bold text-white hover:text-[#283044]">
+            <Link href="/#education" className="lg:text-lg  text-xs font-bold text-white hover:text-[#283044]">
               Education
             </Link>
             {/* Skills */}
-            <Link href="/#skills" className="text-lg font-bold text-white hover:text-[#283044]">
+            <Link href="/#skills" className="lg:text-lg text-xs font-bold text-white hover:text-[#283044]">
               Skills
             </Link>
             {/* Experience */}
-            <Link href="/#experience" className="text-lg font-bold text-white hover:text-[#283044]">
+            <Link href="/#experience" className="lg:text-lg  text-xs font-bold text-white hover:text-[#283044]">
               Experience
             </Link>
-            <Link href="/blog " className="text-lg font-bold text-white hover:text-[#283044]">
+            <Link href="/blog " className="lg:text-lg  text-xs font-bold text-white hover:text-[#283044]">
               Blog
             </Link>
           </div>
@@ -163,9 +163,9 @@ const Home: NextPage = () => {
           <div id="canvas-container" ref={canvasRef} className="section">
           </div>
           <div className="flex flex-row items-center justify-center gap-4">
-            <h1 className="text-lg"> What was that??!</h1>
+            <h1 className="md:text-lg text-md"> What was that??!</h1>
             {/* Find out more  refrence to varian*/}
-            <button className="px-4 py-2 text-lg font-bold text-white bg-[#283044] rounded-md hover:bg-[#4f188d]">
+            <button className="px-4 py-2 md:text-lg text-md font-bold text-white bg-[#283044] rounded-md hover:bg-[#4f188d]">
               <Link href="/#varian">
                 Find out more!
               </Link>
@@ -173,7 +173,7 @@ const Home: NextPage = () => {
             </button>
           </div>
           {/* Create a div with 2 coulums the left contains an image followed by buttons to social media underneath them (2 rows). The right column contains text and buttons under neath them */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-32">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-32">
             <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
               {/* Now we want two divs one for the image and one to hold the list of buttons to github, linkedin, twitter.. */}
               <div className="flex flex-col items-center justify-center gap-4">
@@ -201,16 +201,16 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex max-w-xs flex-col gap-10 rounded-xl bg-white/10 p-4 text-white">
-              <h3 className="text-3xl font-bold text-[#283044]">Who am I?</h3>
-              <div className="text-lg">
+              <h3 className="md:text-3xl text-xl font-bold text-[#283044]">Who am I?</h3>
+              <div className="md:text-lg text-md">
                 I am a freshman at TU Delft studying Computer Science and Engineering! Welcome to my space - an overview of some of my accomplishments to date.
               </div>
               <div className="flex flex-row gap-4">
-                <button className="bg-[#283044] hover:bg-[#4f188d] text-white rounded-md p-2">
+                <button className="md:text-lg text-md bg-[#283044] hover:bg-[#4f188d] text-white rounded-md p-2">
                   <Link href="https://arxiv.org/abs/2304.03442">
                     A good read!
                   </Link></button>
-                <button className="bg-[#283044]  hover:bg-[#4f188d] text-white rounded-md p-2">
+                <button className=" md:text-lg text-md bg-[#283044]  hover:bg-[#4f188d] text-white rounded-md p-2">
                   <Link href="mailto:sagar.chethankumar@gmail.com">
                     Contact
                   </Link>
@@ -226,25 +226,25 @@ const Home: NextPage = () => {
               Education
             </h1>
             {/* Create two columns (left for school right for university that have two rows withine ach of them the top row containing an image and the bottom containing a text description. */}
-            <div className="grid grid-cols-1 gap-64 sm:grid-cols-2 md:gap-64">
+            <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:gap-64">
               <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
                 {/* Add the image for school */}
                 <img src="/fis.jpg" alt="logo" className="w-full h-full rounded-2xl" />
-                <h1 className="text-lg font-bold text-white">
+                <h1 className="md:text-lg text-md font-bold text-white">
                   Franconian International School
                 </h1>
-                <div className="text-lg">
-                  I am a graduate of the FIS in 2022. I studied the International Baccalaureate Diploma Programme and graduated with a score of 43/45. I was also the recepient of the FIS Award in 2022.
+                <div className="md:text-lg text-md">
+                  I did the International Baccalaureate Diploma Programme and graduated in May 2022 with a score of 43/45. I was also the recepient of the FIS Award in 2022.
                 </div>
               </div>
               <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
                 {/* Add the image for school */}
                 <img src="/tud.jpg" alt="logo" className="w-full h-full rounded-2xl" />
-                <h1 className="text-lg font-bold text-white">
+                <h1 className="md:text-lg text-md font-bold text-white">
                   Delft University of Technology
                 </h1>
-                <div className="text-lg">
-                  I am studying Computer Science and Engineering and am in my first year. I am part of Delft Aerospace Rocket Engineering (DARE) and am planning to do honours in the future.
+                <div className="md:text-lg text-md">
+                  I am studying BSc. Computer Science and Engineering and am in my first year. I am part of Delft Aerospace Rocket Engineering (DARE), a student mentor, and honours student.
                 </div>
               </div>
             </div>
@@ -256,9 +256,9 @@ const Home: NextPage = () => {
             <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
               Skills
             </h1>
-            {/* I want two colums one grid with a bunch of <i> tags wityh different skills and on hover the right column should have text saying what projects I have done */}
             <div className="flex flex-row justify-evenly items-center w-full">
-              <div className="flex flex-col h-full items-center justify-center  gap-4 mb-32">
+     
+              <div className="hidden md:flex flex-col h-full items-center justify-center  gap-4 mb-32">
                 <div className="flex flex-row gap-4">
                   <button id="html" className="bg-white/10 text-white hover:bg-white/20 rounded-md p-2">
                     <img src="/html5.svg" alt="logo" className="w-8 text-[#283044]" />
@@ -284,7 +284,7 @@ const Home: NextPage = () => {
               </div>
               <div className="gap-12 flex flex-col">
                 <h1 className="text-2xl font-bold text-white">How comfortable am I with them?</h1>
-                <div className="text-lg ">
+                <div className="md:text-lg text-md ">
                   I can go ahead and build a rocket with them 🚀! (Not literally but you get the point)
                   <li>
                     Java 💖
@@ -296,7 +296,7 @@ const Home: NextPage = () => {
                     HTML/CSS/JS 💝
                   </li>
                 </div>
-                <div className="text-lg">
+                <div className="md:text-lg text-md">
                   I can craft a cool app with them 📱
                   <li>
                     Figma 💗
@@ -308,7 +308,7 @@ const Home: NextPage = () => {
                     C 💌
                   </li>
                 </div>
-                <div className="text-lg">
+                <div className="md:text-lg text-md">
                   I want to get to know them better 🤔
                   <li>
                     React 💙
@@ -326,37 +326,38 @@ const Home: NextPage = () => {
 
           {/* Create Experience Section */}
 
-          <div id="experience" className="flex flex-col items-center gap-32">
+          <div id="experience" className="flex flex-col items-center gap-16 md:gap-32">
             <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
               Experience
             </h1>
             {/* DARE */}
-            <div className="container flex flex-row justify-evenly gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
+            <div className="container flex flex-col md:flex-row md:justify-evenly items-center  gap-8 md:gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
 
               <div className="flex flex-col container gap-16 items-start w-3/4">
-                <h1 className="text-5xl font-extrabold tracking-tight text-white ">
+                <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   Software/Electronics Engineer <span className="text-[#283044]">@DARE</span> (SRP)
                 </h1>
-                <div className="text-lg">
+                <div className="lg:text-lg text-md">
                   As an avid puzzler, I love learning new ways to apply my skills in Computer Science, either through my existing expertise in algorithms or by branching out into new fields. DARE is precisely this to me - an opportunity to get hands-down experience with the intricacy of engineering. As the only CS student in my multidisciplinary team, I will oversee the seamless interaction between hardware and software throughout all aspects of our launch!</div>
 
               </div>
-              <div className="w-1/3">
+              <div className="lg:w-1/3 w-2/3">
                 <img src="/srp.png" alt="logo" className="w-full h-full rounded-2xl" />
               </div>
+
             </div>
 
-            {/* Variam */}
-            <div id="varian" className="container flex flex-row justify-evenly gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
-              <div className="w-1/2">
+            {/* Varian */}
+            <div id="varian" className="container flex flex-col-reverse md:flex-row md:justify-evenly items-center gap-8 md:gap-16  px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
+              <div className="lg:w-1/6 lg:h-1/2 w-1/2">
                 <img src="/varian.png" alt="logo" className="w-full h-full rounded-2xl" />
               </div>
 
-              <div className="flex flex-col gap-16 items-start w-3/4">
-                <h1 className="text-5xl font-extrabold tracking-tight text-white ">
+              <div className="flex flex-col gap-16 items-start w-2/3">
+                <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   Research & Software Dev Intern <span className="text-[#283044]">@Varian</span>
                 </h1>
-                <div className="text-lg">
+                <div className="lg:text-lg text-md">
                   Entering the year 2022, I was granted the opportunity to embark on a new programming endeavor - computer vision. Under the guidance of Stefan Wiesner, I conducted a literature review to understand the world of computer vision concerning point clouds and meshes capturing the human body. I developed an extrema estimation software using an adapted version of Dijkstras algorithm. This computed the global maxima of a given human point cloud, labeling this vertex path from the centroid. Thanks once again to Varian and Stefan for taking me on board!
                 </div>
                 {/* Button to the report */}
@@ -369,78 +370,78 @@ const Home: NextPage = () => {
             </div>
 
             {/* Adidas */}
-            <div className="container flex flex-row justify-evenly gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
+            <div className="container flex flex-col md:flex-row md:justify-evenly  items-center gap-8 md:gap-16  px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
               <div className="flex flex-col gap-16 items-start w-3/4">
-                <h1 className="text-5xl font-extrabold tracking-tight text-white ">
+                <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   {/* App Dev Intern @Adidas*/}
                   App Dev Intern <span className="text-[#283044]">@Adidas</span>
                 </h1>
-                <div className="text-lg">
+                <div className="lg:text-lg text-md">
                   I have loved the art of application development, and to this day, I continue to cherish my first formal opportunity of doing exactly this! During my HS freshman summer, I was grateful enough to receive the opportunity to join the Adidas team in building a shoe raffle application based on their CONFIRMED Android Adidas app. Alongside another intern, I developed the raffle ticket system allowing users to randomly be selected for new shoe drops and, by doing so, make their day with free shoes :) </div>
               </div>
-              <div className="w-1/3">
+              <div className="lg:w-1/3 w-2/3">
                 <img src="/confirmed.png" alt="logo" className="w-full h-full rounded-2xl" />
               </div>
             </div>
 
             {/* DigiOnko */}
-            <div className="container flex flex-row justify-evenly gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
-              <div className="w-1/3">
+            <div className="container flex flex-col-reverse md:flex-row md:justify-evenly items-center gap-8 md:gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
+              <div className="lg:w-1/3 w-2/3">
                 <img src="/logo-digionko-rgb.png" alt="logo" className="w-full h-full rounded-2xl" />
               </div>
 
               <div className="flex flex-col gap-16 items-start w-3/4">
-                <h1 className="text-5xl font-extrabold tracking-tight text-white ">
+                <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   Research Intern <span className="text-[#283044]">@DigiOnko</span>
                 </h1>
-                <div className="text-lg">
+                <div className="lg:text-lg text-md">
                   DigiOnko is a country-wide medical project to aid breast cancer treatment and monitoring through machine learning. As a research intern, I helped conduct a systematic review of breast cancer risk parameters and assessed their ability to be implemented in technological integrations and machine learning algorithms. Thanks to the FAU Machine Learning and Data Analytics (Mad) Lab for allowing me to join their team temporarily :)  </div>
               </div>
             </div>
 
 
             {/* Adidas Confirmed */}
-            <div className="container flex flex-row justify-evenly gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
+            <div className="container flex flex-col md:flex-row md:justify-evenly items-center gap-8 md:gap-16  px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
               <div className="flex flex-col gap-16 items-start w-3/4">
-                <h1 className="text-5xl font-extrabold tracking-tight text-white ">
+                <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   {/* Software Dev @ Makerspace Delft */}
                   Software Dev Intern <span className="text-[#283044]">@Makerspace Delft</span>
                 </h1>
-                <div className="text-lg">
+                <div className="lg:text-lg text-md">
                   Currently working part-time at the non-profit Makerspace Delft! Centered around community, building, and passion, Makerspace is the perfect place to be challenged with new things every day! I currently assume many responsibilities but mainly work on upkeeping existing infrastructures and developing a new website :)
                 </div>
               </div>
-              <div className="w-1/3">
+              <div className="lg:w-1/3 w-2/3">
                 <img src="/msd.jfif" alt="logo" className="w-full h-full rounded-2xl" />
               </div>
             </div>
 
             {/* Digital Twwin */}
-            <div className="container flex flex-row justify-evenly gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
-              <div className="w-1/3">
-                <img src="/digtwin.png" alt="logo" className="mx-8 w-full h-full rounded-2xl" />
+            <div className="container flex flex-col-reverse md:flex-row md:justify-evenly items-center gap-8 md:gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
+              <div className="lg:w-1/3 w-2/3">
+                <img src="/digtwin.png" alt="logo" className="w-full h-full rounded-2xl" />
               </div>
 
               <div className="flex flex-col gap-16 items-start w-3/4">
-                <h1 className="text-5xl font-extrabold tracking-tight text-white ">
+                <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   App Dev & UI/UX Intern <span className="text-[#283044]">@DigitalTwin</span>
                 </h1>
-                <div className="text-lg">
+                <div className="lg:text-lg text-md">
                   After my experience with DigiOnko, I was also tasked with helping Digital Twin, a collaborative project between FAU and Adidas. As an application development intern, I helped design and integrate the existing Digital Twin application into a more modern and Adidas-like user interface. Through integrating sensor data and developing interfaces for both IOS and Android, Digital Twin expanded my programming horizons! Looking forward to seeing what they can achieve in the coming years.
                 </div>
               </div>
             </div>
 
             {/* Kannada Koota Volunteer */}
-            <div className="container flex flex-row justify-evenly gap-16 px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
+            <div className="container flex flex-col md:flex-row md:justify-evenly items-center gap-8 md:gap-16  px-4 py-16 bg-white/10 w-5/6 text-white rounded-2xl">
               <div className="flex flex-col gap-16 items-start w-2/3">
-                <h1 className="text-5xl font-extrabold tracking-tight text-white ">
+                <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   Volunteer <span className="text-[#283044]">@KKF</span>
                 </h1>
-                <div className="text-lg">
+                <div className="lg:text-lg text-md">
                   Kannada Koota Franconia (KKF) is a place to chat, dance, have fun, but above all, reconnect and relish your cultural heritage. As a youth coordinator, I helped incentivize local engagement with south Asian traditions while raising funds for the less fortunate in events earnings. With a group of 250+ members, KKF sets off to reconnect south Asians across the globe.</div>
               </div>
-              <div className="w-1/3">
+              <div className="lg:w-1/3 w-2/3">
                 <img src="/kkf.jpg" alt="logo" className="w-full h-full rounded-2xl" />
               </div>
 
