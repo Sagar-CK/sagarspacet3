@@ -128,7 +128,7 @@ const Home: NextPage = () => {
           <div className="flex items-center">
             <img src="/sck.png" alt="logo" className="lg:h-8 h-4 lg:px-16 px-0" />
           </div>
-          <div className="flex items-center lg:gap-16 gap-4 px-8">
+          <div className="flex items-center lg:gap-16 gap-4 md:px-8">
             {/* Create a link to bring to the education section which is on the same page*/}
             <Link href="/#education" className="lg:text-lg  text-xs font-bold text-white hover:text-[#283044]">
               Education
