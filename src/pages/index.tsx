@@ -172,8 +172,7 @@ const Home: NextPage = () => {
 
             </button>
           </div>
-          {/* Create a div with 2 coulums the left contains an image followed by buttons to social media underneath them (2 rows). The right column contains text and buttons under neath them */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-32">
+           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-32">
             <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
               {/* Now we want two divs one for the image and one to hold the list of buttons to github, linkedin, twitter.. */}
               <div className="flex flex-col items-center justify-center gap-4">
@@ -206,10 +205,6 @@ const Home: NextPage = () => {
                 I am a freshman at TU Delft studying Computer Science and Engineering! Welcome to my space - an overview of some of my accomplishments to date.
               </div>
               <div className="flex flex-row gap-4">
-                <button className="md:text-lg text-md bg-[#283044] hover:bg-[#4f188d] text-white rounded-md p-2">
-                  <Link href="https://arxiv.org/abs/2304.03442">
-                    A good read!
-                  </Link></button>
                 <button className=" md:text-lg text-md bg-[#283044]  hover:bg-[#4f188d] text-white rounded-md p-2">
                   <Link href="mailto:sagar.chethankumar@gmail.com">
                     Contact
@@ -225,8 +220,7 @@ const Home: NextPage = () => {
             <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
               Education
             </h1>
-            {/* Create two columns (left for school right for university that have two rows withine ach of them the top row containing an image and the bottom containing a text description. */}
-            <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:gap-64">
+          <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 md:gap-64">
               <div className="flex max-w-xs flex-col gap-4 rounded-2xl">
                 {/* Add the image for school */}
                 <img src="/fis.jpg" alt="logo" className="w-full h-full rounded-2xl" />
@@ -244,7 +238,7 @@ const Home: NextPage = () => {
                   Delft University of Technology
                 </h1>
                 <div className="md:text-lg text-md">
-                  I am studying BSc. Computer Science and Engineering and am in my first year. I am part of Delft Aerospace Rocket Engineering (DARE), a student mentor, and honours student.
+                  I am studying BSc. Computer Science and Engineering and am in my first year. I am part of Delft Aerospace Rocket Engineering (DARE) and a student mentor.
                 </div>
               </div>
             </div>
@@ -358,7 +352,7 @@ const Home: NextPage = () => {
                   Research & Software Dev Intern <span className="text-[#283044]">@Varian</span>
                 </h1>
                 <div className="lg:text-lg text-md">
-                  Entering the year 2022, I was granted the opportunity to embark on a new programming endeavor - computer vision. Under the guidance of Stefan Wiesner, I conducted a literature review to understand the world of computer vision concerning point clouds and meshes capturing the human body. I developed an extrema estimation software using an adapted version of Dijkstras algorithm. This computed the global maxima of a given human point cloud, labeling this vertex path from the centroid. Thanks once again to Varian and Stefan for taking me on board!
+                  Entering the year 2022, I was granted the opportunity to embark on a new computer science endeavor - computer vision. Under the guidance of Stefan Wiesner, I conducted a literature review to understand the world of computer vision concerning point clouds and meshes capturing the human body. I developed an extrema estimation software using an adapted version of Dijkstras algorithm. This computed the global maxima of a given human point cloud, labeling this vertex path from the centroid. Thanks once again to Varian and Stefan for taking me on board!
                 </div>
                 {/* Button to the report */}
                 <button className="bg-white/10 text-white hover:bg-white/20 rounded-md p-2">
@@ -396,7 +390,13 @@ const Home: NextPage = () => {
                 </h1>
                 <div className="lg:text-lg text-md">
                   DigiOnko is a country-wide medical project to aid breast cancer treatment and monitoring through machine learning. As a research intern, I helped conduct a systematic review of breast cancer risk parameters and assessed their ability to be implemented in technological integrations and machine learning algorithms. Thanks to the FAU Machine Learning and Data Analytics (Mad) Lab for allowing me to join their team temporarily :)  </div>
+                  <button className="bg-white/10 text-white hover:bg-white/20 rounded-md p-2">
+                  <Link href="https://drive.google.com/file/d/1JOVzFal4RGDkwVlqOjsGJE0P5rbLy6If/view">
+                    Read the literature review here!
+                  </Link>
+                </button>
               </div>
+              
             </div>
 
 
@@ -405,7 +405,7 @@ const Home: NextPage = () => {
               <div className="flex flex-col gap-16 items-start w-3/4">
                 <h1 className="lg:text-5xl text-2xl font-extrabold tracking-tight text-white ">
                   {/* Software Dev @ Makerspace Delft */}
-                  Software Dev Intern <span className="text-[#283044]">@Makerspace Delft</span>
+                  Software Dev <span className="text-[#283044]">@Makerspace Delft</span>
                 </h1>
                 <div className="lg:text-lg text-md">
                   Currently working part-time at the non-profit Makerspace Delft! Centered around community, building, and passion, Makerspace is the perfect place to be challenged with new things every day! I currently assume many responsibilities but mainly work on upkeeping existing infrastructures and developing a new website :)
@@ -453,7 +453,6 @@ const Home: NextPage = () => {
 
 
           <footer className="flex items-center justify-center w-full px-4 py-8 backdrop-filter backdrop-blur bg-white/10">
-            {/* Create one div that is flex col with gap */}
             <div className="flex items-center gap-16 px-8">
               <button className="bg-white/10 text-white hover:bg-white/20 rounded-md p-2">
                 <Link href="https://github.com/Sagar-CK">
