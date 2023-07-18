@@ -202,7 +202,7 @@ const Home: NextPage = () => {
             <div className="flex max-w-xs flex-col gap-10 rounded-xl bg-white/10 p-4 text-white">
               <h3 className="md:text-3xl text-xl font-bold text-[#283044]">Who am I?</h3>
               <div className="md:text-lg text-md">
-                I am a freshman at TU Delft studying Computer Science and Engineering! Welcome to my space - an overview of some of my accomplishments to date.
+                I am a second year Computer Science and Engineering student at the TU Delft! Welcome to my space - an overview of some of my accomplishments to date.
               </div>
               <div className="flex flex-row gap-4">
                 <button className=" md:text-lg text-md bg-[#283044]  hover:bg-[#4f188d] text-white rounded-md p-2">
