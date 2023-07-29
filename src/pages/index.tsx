@@ -352,7 +352,7 @@ const Home: NextPage = () => {
                     Simulations Engineer <span className="text-[#98b4c7]">@DARE</span> (Stratos V)
                   </h1>
                   <div className="lg:text-lg text-md">
-                    As an avid puzzler, I love learning new ways to apply my skills in Computer Science, either through my existing expertise in algorithms or by branching out into new fields. DARE is precisely this to me - an opportunity to get hands-down experience with the intricacy of engineering. As a simulations engineer I look forward to applying my software development skills to adding the launch of the Stratos V rocket in 2025!</div>
+                    As an avid puzzler, I love learning new ways to apply my skills in Computer Science, either through my existing expertise in algorithms or by branching out into new fields. DARE is precisely this to me - an opportunity to get hands-down experience with the intricacy of engineering. As a simulations engineer I look forward to applying my software development skills to aiding the launch of the Stratos V rocket in 2025!</div>
                 </div>
               </div>
 
