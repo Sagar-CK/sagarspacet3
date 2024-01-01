@@ -207,12 +207,12 @@ const Home: NextPage = () => {
               <div className="flex max-w-xs flex-col gap-10 rounded-xl bg-white/10 p-4 text-white">
                 <h3 className="md:text-3xl text-xl font-bold text-[#283044]">Who am I?</h3>
                 <div className="md:text-lg text-md">
-                  I am a second year Computer Science and Engineering student at the TU Delft! Welcome to my space - an overview of some of my accomplishments to date.
+                  I am a second year Computer Science student @ TU Delft! Welcome to my space - an overview of some of my accomplishments to date.
                 </div>
                 <div className="flex flex-row gap-4">
                   <button className=" md:text-lg text-md bg-[#283044]  hover:bg-[#4f188d] text-white rounded-md p-2">
                     <Link href="mailto:sagar.chethankumar@gmail.com">
-                      Contact
+                      Contact me!
                     </Link>
                   </button>
                 </div>
@@ -252,7 +252,7 @@ const Home: NextPage = () => {
                     </h1>
                     <div className="md:text-lg text-md">
                       {/* Create a list of divs that are cleanly colorfully formatted descrbing accomplishments */}
-                      Member of the Honours Programme, Delft Aerospace Rocket Engineering (DARE), and MakerSpace Delft.
+                      Honours Programme (research under <Link className='text-white hover:text-[#283044]' href='http://ujwalgadiraju.com/'>Dr. Ujwal Gadiraju</Link>), Delft Aerospace Rocket Engineering (DARE), and MakerSpace Delft.
                     </div>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ const Home: NextPage = () => {
                     Simulations Engineer <span className="text-[#98b4c7]">@DARE</span> (Stratos V)
                   </h1>
                   <div className="lg:text-lg text-md">
-                    As an avid puzzler, I love learning new ways to apply my skills in Computer Science, either through my existing expertise in algorithms or by branching out into new fields. DARE is precisely this to me - an opportunity to get hands-down experience with the intricacy of engineering. As a simulations engineer I look forward to applying my software development skills to aiding the launch of the Stratos V rocket in 2025!</div>
+                    As an avid puzzler, I love learning new ways to apply my skills in Computer Science, either through my existing expertise in algorithms or by branching out into new fields. DARE is precisely this to me - an opportunity to get hands-down experience with the intricacy of engineering. As a simulations engineer I enjoyed  applying my software development skills to aiding the launch of the Stratos V rocket!</div>
                 </div>
               </div>
 

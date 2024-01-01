@@ -53,8 +53,14 @@ const Home: NextPage = () => {
             {/* Nothing here yet + loading svg */}
             <div className="flex flex-col items-center justify-center gap-4">
               <h1 className="text-lg font-bold text-white">
-                Nothing here yet, coming soon 💫
+                Nothing here yet, coming soon💫
               </h1>
+              <h1 className="text-lg font-bold text-white">
+              <Link href="https://medium.com/@sagar.chethankumar" className="text-white hover:text-[#283044]" >https://medium.com/@sagar.chethankumar</Link> 
+              </h1>
+
+              <p></p>
+              
               <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
@@ -62,8 +68,6 @@ const Home: NextPage = () => {
               </div>
 
           </div>
-
-
 
         </div>
         </main>
