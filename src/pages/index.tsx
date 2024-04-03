@@ -326,7 +326,7 @@ const Home: NextPage = () => {
                       React 💙
                     </li>
                     <li>
-                      Node.js 💚
+                      Rust 💚
                     </li>
                     <li>
                       Scala 💜
